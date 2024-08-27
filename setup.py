@@ -6,11 +6,6 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     install_requires=[],
-    entry_points={
-        'console_scripts': [
-            'enigma=enigma.enigma:main',
-        ],
-    },
     author="João Pedro Queiroz Viana, Pedro Fardin",
     author_email="joaopqv@al.insper.edu.br, ",
     description="Uma biblioteca de criptografia.",
