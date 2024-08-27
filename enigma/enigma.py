@@ -12,7 +12,7 @@ def one_hot_encoding(mensagem):
     for i, letra in enumerate(mensagem):
         matriz[i, dicionario[letra]] = 1
     
-    return matriz
+    return matriz, dicionario
     
 
 
@@ -23,3 +23,5 @@ def gerar_matrizes_de_permutacao(N : int) -> Tuple[np.ndarray, np.ndarray]:
     R = np.random.permutation(identidade)
 
     return (P, R)
+
+print(one_hot_encoding("olal"))
