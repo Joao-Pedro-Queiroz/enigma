@@ -2,17 +2,24 @@ import numpy as np
 from typing import Tuple
 
 
+def fazer_dict():
+    alfabeto = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,;:?!@#%&_-+-/* "
+    dict = {}
+
+    for i in range(len(alfabeto)):
+        dict[alfabeto[i]] = i
+
+    return dict
+
+
 def one_hot_encoding(mensagem):
-    dicionario = {}
-    for i, letra in enumerate(mensagem):
-        if letra not in dicionario:
-            dicionario[letra] = len(dicionario)
+    dicionario = fazer_dict()
     
-    matriz = np.zeros((len(mensagem), len(dicionario)))
+    matriz = np.zeros((len(dicionario), len(mensagem)))
     for i, letra in enumerate(mensagem):
-        matriz[i, dicionario[letra]] = 1
+        matriz[dicionario[letra], i] = 1
     
-    return matriz, dicionario
+    return matriz
     
 
 
@@ -31,3 +38,5 @@ def encriptar_enigma(mensagem : str, P : np.ndarray, Q : np.ndarray) -> str:
 
 def decriptar_enigma(mensagem_encriptada : str, P : np.ndarray, Q : np.ndarray) -> str:
     raise NotImplementedError
+
+print(one_hot_encoding("Joao"))
