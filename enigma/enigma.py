@@ -75,10 +75,3 @@ def decriptar_enigma(mensagem_encriptada : str, P : np.ndarray, Q : np.ndarray) 
                 break
 
     return mensagem_descodificada
-
-
-P, Q = gerar_matrizes_de_permutacao(len(fazer_dict()))
-mensagem_codificada = encriptar_enigma("Chocolate", P, Q)
-mensagem_descodificada = decriptar_enigma(mensagem_codificada, P, Q)
-print(mensagem_codificada)
-print(mensagem_descodificada)
