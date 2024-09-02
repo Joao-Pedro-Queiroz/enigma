@@ -3,7 +3,7 @@ from typing import Tuple
 
 
 def fazer_dict():
-    alfabeto = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,;:?!@#%&_-+/* "
+    alfabeto = "abcdefghijklmnopqrstuvwxyzçáâãàéêíîóôõúûABCDEFGHIJKLMNOPQRSTUVWXYZÇÁÂÃÀÉÊÍÎÓÔÕÚÛ0123456789.,;:?!@#%&_-+/* "
     dict = {}
 
     for i in range(len(alfabeto)):
