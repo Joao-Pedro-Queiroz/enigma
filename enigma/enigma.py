@@ -75,6 +75,3 @@ def decriptar_enigma(mensagem_encriptada : str, P : np.ndarray, Q : np.ndarray) 
                 break
 
     return mensagem_descodificada
-
-
-print("Teste")
